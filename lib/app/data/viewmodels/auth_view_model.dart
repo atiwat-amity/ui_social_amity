@@ -30,20 +30,10 @@ class AuthViewModel with ChangeNotifier {
   AuthState _state = AuthState.initial();
   AuthState get state => _state;
 
-  BuildContext? _context;
-  AuthViewModel(BuildContext context) {
-    _context = context;
-    _register();
-  }
-
-  Future<void> _register() async {
-    if (_context == null) {
-      return;
-    }
-    await Future.delayed(const Duration(milliseconds: 100));
+  Future<void> register(BuildContext context) async {
     try {
       AmitySLEUIKit.registerDevice(
-        context: _context!,
+        context: context,
         userId: 'John',
         displayName: 'John',
         callback: (isSuccess, error) {
