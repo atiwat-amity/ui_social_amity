@@ -1,7 +1,7 @@
 # ui_social_amity
 
 ## Flutter version: fvm
-    please check version with path: .fvm/fvm_config.json
+    Please check version with path: .fvm/fvm_config.json
 
 ## :motorway: Flavors
 - prod
