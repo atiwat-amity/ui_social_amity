@@ -22,4 +22,5 @@ class TabViewItem extends Equatable {
 enum TabRoute {
   feed,
   userProfile,
+  editCommunity
 }

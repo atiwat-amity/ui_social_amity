@@ -12,8 +12,8 @@ packages:
   amity_uikit_beta_service:
     dependency: "direct main"
     description:
-      path: "../flutter_amity_uikit_beta_service"
-      relative: true
+      path: "/Users/mark/Projects/ThanakornThanom--flutter_amity_uikit_beta_service"
+      relative: false
     source: path
     version: "0.2.1"
   animation_wrappers:

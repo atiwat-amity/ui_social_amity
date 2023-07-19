@@ -50,6 +50,11 @@ class TabViewModel with ChangeNotifier {
       label: 'Profile',
       route: TabRoute.userProfile,
     ),
+    TabViewItem(
+      icon: Icon(Icons.person),
+      label: 'Edit',
+      route: TabRoute.editCommunity,
+    ),
   ];
 
   void selectTab(int index) {
