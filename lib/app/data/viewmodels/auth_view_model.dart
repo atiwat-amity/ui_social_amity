@@ -41,6 +41,7 @@ class AuthViewModel with ChangeNotifier {
           debugPrint('error:$error');
           _state = _state.copyWith(isLogin: isSuccess);
           notifyListeners();
+          
         },
       );
     } catch (e) {

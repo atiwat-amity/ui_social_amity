@@ -46,14 +46,14 @@ class TabViewModel with ChangeNotifier {
       route: TabRoute.feed,
     ),
     TabViewItem(
-      icon: Icon(Icons.person),
-      label: 'Profile',
-      route: TabRoute.userProfile,
+      icon: Icon(Icons.menu),
+      label: 'Edit',
+      route: TabRoute.editCommunity,
     ),
     TabViewItem(
       icon: Icon(Icons.person),
-      label: 'Edit',
-      route: TabRoute.editCommunity,
+      label: 'Profile',
+      route: TabRoute.userProfile,
     ),
   ];
 

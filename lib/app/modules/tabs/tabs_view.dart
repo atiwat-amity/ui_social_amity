@@ -16,7 +16,7 @@ class TabsView extends StatelessWidget {
     
     return Consumer2<AuthViewModel, TabViewModel>(
       builder: (context, auth, vm, child) {
-        const list = [FeedView(), UserProfileView(), CommunityTabbar()];
+        const list = [FeedView(),  CommunityTabbar(), UserProfileView(),];
         return auth.state.isLogin ? Scaffold(
           body: list[vm.state.currentIndex],
           bottomNavigationBar: BottomNavigationBar(

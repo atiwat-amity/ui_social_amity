@@ -1,11 +1,17 @@
-import 'package:amity_uikit_beta_service/view/chat/chat_friend_tab.dart';
+import 'package:amity_uikit_beta_service/view/user/user_profile.dart';
+import 'package:amity_uikit_beta_service/viewmodel/amity_viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class UserProfileView extends StatelessWidget {
   const UserProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const AmitySLEChannelScreen();
+    final user = context.watch<AmityVM>().currentamityUser;
+    if(user == null){
+      return const SizedBox();
+    }
+    return UserProfileScreen(amityUser: user,);
   }
 }
