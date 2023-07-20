@@ -1,8 +1,10 @@
-import 'package:amity_uikit_beta_service/view/social/create_post.dart';
 import 'package:amity_uikit_beta_service/view/social/create_post_screen.dart';
 import 'package:amity_uikit_beta_service/view/social/home_following_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ui_social_amity/app/constants/colors.dart';
+
+import '../../data/viewmodels/auth_view_model.dart';
 
 class FeedView extends StatelessWidget {
   const FeedView({super.key});
@@ -14,7 +16,7 @@ class FeedView extends StatelessWidget {
         title: const Text('HOME'),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: ()=> context.read<AuthViewModel>().logout(),
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: Icon(Icons.settings),

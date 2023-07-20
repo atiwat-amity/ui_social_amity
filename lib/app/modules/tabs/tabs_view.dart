@@ -29,7 +29,16 @@ class TabsView extends StatelessWidget {
               }),
             ],
             currentIndex: vm.state.currentIndex,
-            onTap: vm.selectTab,
+            onTap: (index){
+              if(index == 2){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const UserProfileView(),
+                    ));
+              }else{
+                vm.selectTab(index);
+              }
+            },
             unselectedItemColor: Colors.grey,
             selectedItemColor: AppColors.secondary,
             backgroundColor: AppColors.primary,
