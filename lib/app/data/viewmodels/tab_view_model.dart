@@ -42,12 +42,12 @@ class TabViewModel with ChangeNotifier {
   final items = const <TabViewItem>[
     TabViewItem(
       icon: Icon(Icons.home),
-      label: 'FEED',
+      label: 'Home',
       route: TabRoute.feed,
     ),
     TabViewItem(
       icon: Icon(Icons.menu),
-      label: 'Edit',
+      label: 'Community',
       route: TabRoute.editCommunity,
     ),
     TabViewItem(
