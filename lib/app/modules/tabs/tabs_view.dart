@@ -39,6 +39,8 @@ class TabsView extends StatelessWidget {
                 vm.selectTab(index);
               }
             },
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
             unselectedItemColor: Colors.grey,
             selectedItemColor: AppColors.secondary,
             backgroundColor: AppColors.primary,
