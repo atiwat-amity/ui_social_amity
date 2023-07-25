@@ -1,4 +1,3 @@
-import 'package:amity_uikit_beta_service/view/social/create_post_screen.dart';
 import 'package:amity_uikit_beta_service/view/social/home_following_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -66,25 +65,6 @@ class FeedView extends StatelessWidget {
         ),
       ),
       body: const GlobalFeedScreen(),
-      floatingActionButton: GestureDetector(
-        onTap: () async {
-          await Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => const CreatePostScreen2(),
-          ));
-        },
-        child: ClipOval(
-          child: Container(
-            width: 50,
-            height: 50,
-            color: AppColors.secondary,
-            child: const Icon(
-              Icons.add,
-              color: AppColors.primary,
-              size: 25,
-            ),
-          ),
-        ),
-      ),
     );
   }
 }
