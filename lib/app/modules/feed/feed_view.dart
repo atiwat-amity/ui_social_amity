@@ -1,4 +1,5 @@
 import 'package:amity_uikit_beta_service/view/social/home_following_screen.dart';
+import 'package:amity_uikit_beta_service/view/social/search_communities.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_social_amity/app/constants/colors.dart';
@@ -13,6 +14,16 @@ class FeedView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('HOME'),
+        leading: GestureDetector(
+          onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const SearchCommunitiesScreen(),
+                    )),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(Icons.search),
+          ),
+        ),
         actions: [
           GestureDetector(
             onTap: ()=> context.read<AuthViewModel>().logout(),
