@@ -37,10 +37,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   equatable: ^2.0.5
   provider: ^6.0.5
+  firebase_core: ^2.15.0
   
   amity_uikit_beta_service:
-    path: /Users/mark/Projects/ThanakornThanom--flutter_amity_uikit_beta_service
-    # path: ../flutter_amity_uikit_beta_service
+    # path: /Users/mark/Projects/ThanakornThanom--flutter_amity_uikit_beta_service
+    path: ../flutter_amity_uikit_beta_service
 
 dev_dependencies:
   flutter_test:

@@ -36,3 +36,9 @@ Create or update .vscode/launch.json to include the following:
 regenerate files.
 > flutter pub run build_runner build --delete-conflicting-outputs
 
+## Download GoogleService
+Download in project firebase and paste to location below.
+### iOS 
+ios/Runner/GoogleService-Info.plist
+### Android
+android/app/google-services.json

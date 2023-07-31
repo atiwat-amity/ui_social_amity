@@ -1,10 +1,12 @@
 import 'package:amity_uikit_beta_service/amity_uikit_beta_service.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:ui_social_amity/app/application.dart';
 
-void main() {
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   AmitySLEUIKit.initUIKit(
       "b3babb0b3a89f4341d31dc1a01091edcd70f8de7b23d697f", "sg");
@@ -17,5 +19,6 @@ void main() {
       statusBarBrightness: isDarkMode ? Brightness.light:Brightness.dark,
     ),
   );
+  await Firebase.initializeApp();
   runApp(const Application());
 }
