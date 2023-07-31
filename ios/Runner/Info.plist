@@ -34,12 +34,6 @@
 	<string>$(VERSION_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>Request for release.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Request for release.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Request for release.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
