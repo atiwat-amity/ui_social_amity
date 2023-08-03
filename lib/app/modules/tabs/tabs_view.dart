@@ -16,7 +16,7 @@ class TabsView extends StatelessWidget {
     
     return Consumer2<AuthViewModel, TabViewModel>(
       builder: (context, auth, vm, child) {
-        const list = [FeedView(),  CommunityTabbar(), UserProfileView(),];
+        const list = [FeedView(),  CommunityTabbar(), UserProfileView(openTabView: false,),];
         return auth.state.isLogin ? Scaffold(
           body: list[vm.state.currentIndex],
           bottomNavigationBar: BottomNavigationBar(
@@ -33,7 +33,7 @@ class TabsView extends StatelessWidget {
               if(index == 2){
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const UserProfileView(),
+                    builder: (context) => const UserProfileView(openTabView: false),
                     ));
               }else{
                 vm.selectTab(index);
