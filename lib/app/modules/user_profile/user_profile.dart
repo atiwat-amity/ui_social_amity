@@ -4,14 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class UserProfileView extends StatelessWidget {
-  const UserProfileView({super.key});
-
+  const UserProfileView({
+    super.key,
+    this.openTabView = true,
+  });
+  final bool openTabView;
   @override
   Widget build(BuildContext context) {
     final user = context.watch<AmityVM>().currentamityUser;
-    if(user == null){
+    if (user == null) {
       return const SizedBox();
     }
-    return UserProfileScreen(amityUser: user,);
+    return UserProfileScreen(
+      amityUser: user,
+      openTabView: openTabView,
+    );
   }
 }
