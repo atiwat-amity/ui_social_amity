@@ -1,3 +1,4 @@
+import 'package:amity_uikit_beta_service/amity_uikit_beta_service.dart';
 import 'package:amity_uikit_beta_service/view/social/community_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -5,7 +6,6 @@ import 'package:ui_social_amity/app/constants/colors.dart';
 import 'package:ui_social_amity/app/data/providers/providers.dart';
 import 'package:ui_social_amity/app/modules/auth/auth_view.dart';
 
-import '../feed/feed_view.dart';
 import '../user_profile/user_profile.dart';
 
 class TabsView extends StatelessWidget {
@@ -16,7 +16,7 @@ class TabsView extends StatelessWidget {
     
     return Consumer2<AuthViewModel, TabViewModel>(
       builder: (context, auth, vm, child) {
-        const list = [FeedView(),  CommunityTabbar(), UserProfileView(openTabView: false,),];
+        const list = [CommunityView(),  CommunityTabbar(), UserProfileView(openTabView: false,),];
         return auth.state.isLogin ? Scaffold(
           body: list[vm.state.currentIndex],
           bottomNavigationBar: BottomNavigationBar(

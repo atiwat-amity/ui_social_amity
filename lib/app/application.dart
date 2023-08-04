@@ -16,6 +16,7 @@ class Application extends StatelessWidget {
 
         AmitySLEUIKit.configAmityThemeColor(context2, (config) {
           config.primaryColor = AppColors.primary;
+          config.secondaryColor = AppColors.secondary;
           config.appbarConfig = AppbarConfig(
             backgroundColor: AppColors.primary,
             textColor: Colors.white,
