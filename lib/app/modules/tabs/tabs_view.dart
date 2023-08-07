@@ -1,5 +1,6 @@
 import 'package:amity_uikit_beta_service/amity_uikit_beta_service.dart';
 import 'package:amity_uikit_beta_service/view/social/community_tabbar.dart';
+import 'package:amity_uikit_beta_service/viewmodel/amity_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_social_amity/app/constants/colors.dart';
@@ -14,10 +15,10 @@ class TabsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return Consumer2<AuthViewModel, TabViewModel>(
-      builder: (context, auth, vm, child) {
+    return Consumer3<AuthViewModel, TabViewModel, AmityVM>(
+      builder: (context, auth, vm, amityVM, child) {
         const list = [CommunityView(),  CommunityTabbar(), UserProfileView(openTabView: false,),];
-        return auth.state.isLogin ? Scaffold(
+        return amityVM.isLogin ? Scaffold(
           body: list[vm.state.currentIndex],
           bottomNavigationBar: BottomNavigationBar(
             items: [
