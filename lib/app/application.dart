@@ -13,7 +13,6 @@ class Application extends StatelessWidget {
   Widget build(BuildContext context) {
     return AmitySLEProvider(
       child: Builder(builder: (context2) {
-
         AmitySLEUIKit.configAmityThemeColor(context2, (config) {
           config.primaryColor = AppColors.primary;
           config.secondaryColor = AppColors.secondary;
@@ -26,21 +25,24 @@ class Application extends StatelessWidget {
             backgroundColor: AppColors.primary,
             textColor: Colors.white,
           );
+          config.userProfileConfig = UserProfileConfig(
+            isOpenTabView: false,
+            isOpenEditProfile: true,
+          );
         });
-        
+
         return MultiProvider(
           providers: AppProviders.providers,
           child: SafeArea(
             child: MaterialApp(
               navigatorKey: NavigationService.navigatorKey,
-              title: 'Social Amity',          
+              title: 'Social Amity',
               theme: ThemeData(
-                primaryColor: AppColors.primary,
-                secondaryHeaderColor: AppColors.secondary,
-                appBarTheme: const AppBarTheme(
-                  backgroundColor: AppColors.primary,
-                )
-              ),
+                  primaryColor: AppColors.primary,
+                  secondaryHeaderColor: AppColors.secondary,
+                  appBarTheme: const AppBarTheme(
+                    backgroundColor: AppColors.primary,
+                  )),
               debugShowCheckedModeBanner: false,
               home: const TabsView(),
             ),
