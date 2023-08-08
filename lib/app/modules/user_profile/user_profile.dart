@@ -17,7 +17,6 @@ class UserProfileView extends StatelessWidget {
     }
     return UserProfileScreen(
       amityUser: user,
-      openTabView: openTabView,
     );
   }
 }
