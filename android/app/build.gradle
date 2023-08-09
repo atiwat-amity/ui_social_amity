@@ -88,7 +88,7 @@ android {
             dimension "app"
             resValue "string", "app_name", "Social Amity"
             versionName = "1.0.0"
-            versionCode = 5
+            versionCode = 6
         }
     }
 

@@ -22,8 +22,8 @@ class Application extends StatelessWidget {
             iconBackColor: Colors.white,
           );
           config.buttonConfig = ButtonConfig(
-            backgroundColor: AppColors.primary,
-            textColor: Colors.white,
+            backgroundColor: AppColors.secondary,
+            textColor: Colors.black,
           );
           config.userProfileConfig = UserProfileConfig(
             isOpenTabView: false,
